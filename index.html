@@ -1,0 +1,932 @@
+<!--
+  ============================================================
+  LAVENDER RETREATS — Holiday Rental Website
+  ============================================================
+  HOW TO EMBED IN GOOGLE SITES:
+  1. Open your Google Site and go to the page you want to embed this on.
+  2. Click Insert → Embed → "Embed code" tab.
+  3. Paste this entire HTML file into the box and click "Next" → "Insert".
+  4. Resize the embedded block to fit your page (drag the bottom handle).
+  5. Replace all placehold.co image URLs with your actual property photos.
+
+  HOW TO REPLACE GALLERY IMAGES:
+  - Scroll to the <script> section at the bottom.
+  - Find `hillsImages` for Lavender Hills and `crestImages` for Lavender Crest.
+  - Replace each `src` URL with your real hosted image URL (e.g. from Imgur or Cloudinary).
+  - Replace each `alt` with a short description of that photo.
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lavender Retreats — Luxury Holiday Villas in Lonavala & Karjat, India</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Lavender Retreats offers two luxury holiday villas in India — Lavender Hills in Lonavala (sleeps 10) and Lavender Crest in Karjat (sleeps 15). Perfect for family getaways, group stays and celebrations." />
+  <meta name="keywords" content="holiday villa Lonavala, holiday villa Karjat, luxury villa rental India, group stay Lonavala, villa near Mumbai, villa near Pune, Lavender Hills Lonavala, Lavender Crest Karjat, holiday home Maharashtra, private pool villa India" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lavender Retreats" />
+  <link rel="canonical" href="https://lavenderhills.in" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#8b5db8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Lavender Retreats" />
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx" />
+
+  <!-- Geo Meta -->
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Lonavala, Maharashtra, India" />
+
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lavenderhills.in" />
+  <meta property="og:title" content="Lavender Retreats — Luxury Holiday Villas in Lonavala & Karjat" />
+  <meta property="og:description" content="Two stunning holiday villas near Mumbai & Pune. Lavender Hills sleeps 10 in Lonavala. Lavender Crest sleeps 15 in Karjat. Book your escape today." />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Lavender Retreats" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lavender Retreats — Luxury Holiday Villas in Lonavala & Karjat" />
+  <meta name="twitter:description" content="Two stunning holiday villas near Mumbai & Pune. Lavender Hills sleeps 10 in Lonavala. Lavender Crest sleeps 15 in Karjat." />
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx" />
+
+  <!-- Schema Markup — LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Lavender Retreats",
+    "url": "https://lavenderhills.in",
+    "logo": "https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx",
+    "image": "https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx",
+    "description": "Lavender Retreats offers two luxury holiday villas in Maharashtra, India — Lavender Hills in Lonavala and Lavender Crest in Karjat.",
+    "telephone": "+918468932183",
+    "email": "reservations@lavenderhills.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lonavala",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "containsPlace": [
+      {
+        "@type": "LodgingBusiness",
+        "name": "Lavender Hills",
+        "description": "Luxury holiday villa in Lonavala sleeping up to 10 guests across 3 bedrooms with private pool.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "A4, NG Valley, Near Buvanchi Misal, Frichley Hill Rd, behind Fariyas Resort",
+          "addressLocality": "Lonavala",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "amenityFeature": [
+          {"@type": "LocationFeatureSpecification", "name": "Private Pool", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "WiFi", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true}
+        ]
+      },
+      {
+        "@type": "LodgingBusiness",
+        "name": "Lavender Crest",
+        "description": "Luxury holiday villa in Karjat sleeping up to 15 guests across 4 bedrooms with panoramic views.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rich Fields, Plot No. 6 & 23, Jambrung",
+          "addressLocality": "Karjat",
+          "addressRegion": "Maharashtra",
+          "postalCode": "410201",
+          "addressCountry": "IN"
+        },
+        "amenityFeature": [
+          {"@type": "LocationFeatureSpecification", "name": "Private Garden", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "WiFi", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --lavender-pale: #f4f0fa; --lavender-soft: #e8dff5;
+      --lavender-mid: #c4a8e8; --lavender-deep: #8b5db8;
+      --gold: #c9a96e; --gold-light: #e8d5b0;
+      --charcoal: #2c2c38; --warm-white: #fdfbf8; --text-body: #4a4655;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', 'Helvetica Neue', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); font-weight: 300; color: var(--charcoal); background: var(--warm-white); line-height: 1.7; overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: var(--serif); font-weight: 400; line-height: 1.2; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4vw; background: rgba(253,251,248,.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(196,168,232,.25); transition: box-shadow .3s; }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(139,93,184,.1); }
+    .nav-logo { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--lavender-deep); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--lavender-deep); }
+    .nav-cta { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; padding: .6rem 1.4rem; background: var(--lavender-deep); color: #fff !important; border-radius: 2px; transition: background .2s, transform .2s; }
+    .nav-cta:hover { background: var(--gold) !important; transform: translateY(-1px); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--charcoal); }
+
+    /* HERO */
+    .hero { position: relative; height: 65vh; min-height: 480px; max-height: 700px; display: flex; align-items: flex-end; justify-content: flex-start; text-align: left; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx') center 30%/cover no-repeat; }
+    .hero-bg::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,5,25,.92) 0%, rgba(10,5,25,.5) 45%, rgba(10,5,25,.15) 100%); z-index: 1; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,5,25,.4) 0%, transparent 60%); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; color: #fff; padding: 0 6vw 3.5rem; animation: fadeUp 1.2s cubic-bezier(.16,1,.3,1) both; max-width: 700px; }
+    .hero-eyebrow { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1rem; text-shadow: 0 1px 10px rgba(0,0,0,.6); }
+    .hero h1 { font-size: clamp(2.2rem,4.5vw,4rem); font-weight: 300; color: #fff; margin-bottom: 1rem; text-shadow: 0 2px 20px rgba(0,0,0,.5); line-height: 1.1; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-tagline { font-family: var(--serif); font-size: clamp(.88rem,1.4vw,1.05rem); font-weight: 300; font-style: italic; color: rgba(255,255,255,.88); margin-bottom: 2rem; max-width: 480px; text-shadow: 0 1px 12px rgba(0,0,0,.55); line-height: 1.8; }
+    .btn { display: inline-block; font-family: var(--sans); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; padding: 1rem 2.4rem; border: 1px solid rgba(255,255,255,.7); color: #fff; background: transparent; border-radius: 2px; transition: background .25s, border-color .25s, transform .2s; cursor: pointer; }
+    .btn:hover { background: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
+    .btn-solid { background: var(--lavender-deep); border-color: var(--lavender-deep); }
+    .btn-solid:hover { background: var(--gold); border-color: var(--gold); }
+    .hero-scroll { display: none; }
+    .hero-scroll::after { content:''; display:block; width:1px; height:40px; background:linear-gradient(to bottom,rgba(255,255,255,.6),transparent); }
+
+    /* SECTIONS */
+    section { padding: 7rem 4vw; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-family: var(--sans); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: .8rem; }
+    .property .section-label { font-size: 1rem; letter-spacing: .18em; color: var(--lavender-deep); font-weight: 500; }
+    .section-title { font-size: clamp(2rem,4vw,3.2rem); font-weight: 300; color: var(--charcoal); margin-bottom: 1.6rem; }
+    .divider { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 3rem; }
+    .divider-left { margin-left: 0; }
+
+    /* ABOUT */
+    .about { background: var(--lavender-pale); text-align: center; }
+    .about .about-text { max-width: 680px; margin: 0 auto; font-size: 1.05rem; color: var(--text-body); line-height: 1.9; }
+    .about-features { display: flex; justify-content: center; gap: 3rem; margin-top: 4rem; flex-wrap: wrap; }
+    .about-feature { text-align: center; max-width: 180px; }
+    .about-feature-icon { font-size: 1.8rem; margin-bottom: .7rem; }
+    .about-feature h4 { font-family: var(--serif); font-size: 1.05rem; color: var(--lavender-deep); margin-bottom: .3rem; }
+    .about-feature p { font-size: .82rem; color: var(--text-body); line-height: 1.6; }
+
+    /* PROPERTY */
+    .property { background: var(--warm-white); }
+    .property.alt-bg { background: var(--lavender-soft); }
+    .property-inner { max-width: 1200px; margin: 0 auto; }
+    .property-header { margin-bottom: 2.5rem; }
+
+    /* GALLERY GRID */
+    .gallery-grid { display: grid; grid-template-columns: repeat(5,1fr); grid-auto-rows: 180px; gap: 8px; margin-bottom: 1rem; }
+    .gallery-grid .g-item:first-child { grid-column: span 2; grid-row: span 2; }
+    .gallery-grid .g-item:nth-child(8), .gallery-grid .g-item:nth-child(15) { grid-column: span 2; }
+    .g-item { position: relative; overflow: hidden; border-radius: 3px; cursor: pointer; background: var(--lavender-soft); }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.16,1,.3,1), filter .3s; }
+    .g-item:hover img { transform: scale(1.07); filter: brightness(.85); }
+    .g-item::after { content:'⤢'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#fff; opacity:0; transition:opacity .3s; text-shadow:0 2px 8px rgba(0,0,0,.4); }
+    .g-item:hover::after { opacity: 1; }
+    .g-item.show-more::after { content: attr(data-more); font-size:1.4rem; font-family:var(--serif); font-style:italic; background:rgba(44,44,56,.65); backdrop-filter:blur(4px); opacity:1; }
+    .gallery-view-all { text-align: right; margin-bottom: 2.5rem; }
+    .gallery-view-all button { font-family: var(--sans); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; background: none; border: none; color: var(--lavender-deep); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
+    .gallery-view-all button:hover { color: var(--gold); }
+
+    /* LIGHTBOX */
+    #lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(18,15,26,.97); backdrop-filter: blur(6px); flex-direction: column; align-items: center; justify-content: center; }
+    #lightbox.open { display: flex; }
+    .lb-img-wrap { position: relative; display: flex; align-items: center; justify-content: center; max-width: 92vw; }
+    #lb-img { max-width: 88vw; max-height: 76vh; width: auto; height: auto; object-fit: contain; border-radius: 3px; box-shadow: 0 30px 80px rgba(0,0,0,.6); transition: opacity .18s; display: block; }
+    #lb-img.fading { opacity: 0; }
+    .lb-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s, border-color .2s; flex-shrink: 0; }
+    .lb-arrow:hover { background: var(--gold); border-color: var(--gold); }
+    #lb-prev { left: -62px; }
+    #lb-next { right: -62px; }
+    .lb-close { position: fixed; top: 1.4rem; right: 1.4rem; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); color: #fff; width: 42px; height: 42px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; z-index: 10; }
+    .lb-close:hover { background: rgba(255,255,255,.25); }
+    .lb-meta { margin-top: 1.2rem; text-align: center; }
+    .lb-caption { font-family: var(--serif); font-style: italic; font-size: 1rem; color: rgba(255,255,255,.8); margin-bottom: .25rem; }
+    .lb-counter { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+    .lb-thumbs { display: flex; gap: 6px; margin-top: 1.1rem; max-width: 90vw; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.2) transparent; }
+    .lb-thumbs::-webkit-scrollbar { height: 3px; }
+    .lb-thumbs::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 2px; }
+    .lb-thumb { width: 58px; height: 44px; flex-shrink: 0; border-radius: 2px; overflow: hidden; cursor: pointer; border: 2px solid transparent; opacity: .45; transition: border-color .2s, opacity .2s; }
+    .lb-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .lb-thumb.active { border-color: var(--gold); opacity: 1; }
+    .lb-thumb:hover { opacity: .8; }
+
+    /* PROPERTY BODY */
+    .property-body { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .property-desc { font-size: 1rem; color: var(--text-body); line-height: 1.9; }
+    .property-desc p + p { margin-top: 1rem; }
+    .property-badge { display: inline-flex; align-items: center; background: var(--lavender-deep); color: #fff; font-size: .75rem; letter-spacing: .08em; padding: .4rem 1rem; border-radius: 2px; margin-bottom: 1rem; }
+    .amenities-title { font-family: var(--sans); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .amenities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1.5rem; }
+    .amenity { display: flex; align-items: center; gap: .6rem; font-size: .88rem; color: var(--text-body); padding: .35rem 0; border-bottom: 1px solid rgba(196,168,232,.3); }
+    .amenity-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* LOCATION */
+    .location { background: var(--lavender-pale); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+    .location-card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 24px rgba(139,93,184,.08); }
+    .location-card-header { background: var(--lavender-deep); padding: 1.4rem 1.8rem; }
+    .location-card-header h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: #fff; }
+    .location-card-header p { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); margin-top: .2rem; }
+    .location-card-body { padding: 1.8rem; }
+    .location-address { display: flex; gap: .8rem; margin-bottom: 1.4rem; align-items: flex-start; }
+    .location-address-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: .1rem; }
+    .location-address p { font-size: .9rem; color: var(--text-body); line-height: 1.7; }
+    .location-map-btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--sans); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; padding: .65rem 1.2rem; background: var(--lavender-deep); color: #fff; border-radius: 2px; transition: background .2s, transform .2s; margin-bottom: 1.6rem; }
+    .location-map-btn:hover { background: var(--gold); transform: translateY(-1px); }
+    .location-divider { width: 100%; height: 1px; background: var(--lavender-soft); margin: 1.4rem 0; }
+    .how-to-reach-title { font-family: var(--sans); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .reach-item { display: flex; gap: .8rem; align-items: flex-start; margin-bottom: .9rem; }
+    .reach-icon { font-size: 1rem; flex-shrink: 0; }
+    .reach-item p { font-size: .88rem; color: var(--text-body); line-height: 1.6; }
+    .reach-item strong { color: var(--charcoal); font-weight: 500; }
+    @media (max-width: 768px) { .location-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+
+    .enquiry { background: var(--charcoal); color: #fff; text-align: center; }
+    .enquiry .section-title { color: #fff; }
+    .enquiry .section-label { color: var(--gold); }
+    .enquiry-lead { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: rgba(255,255,255,.7); margin-bottom: 3rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .enquiry-form { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; text-align: left; }
+    .form-group { display: flex; flex-direction: column; gap: .45rem; }
+    .form-group.full { grid-column: span 2; }
+    .form-group label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 2px; padding: .85rem 1rem; font-family: var(--sans); font-size: .9rem; font-weight: 300; color: #fff; outline: none; transition: border-color .2s, background .2s; }
+    .form-group select option { background: var(--charcoal); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: rgba(255,255,255,.1); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-submit { grid-column: span 2; text-align: center; margin-top: .5rem; }
+
+    /* FOOTER */
+    footer { background: #1e1b26; color: rgba(255,255,255,.6); padding: 4rem 4vw 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .footer-brand h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: #fff; margin-bottom: .5rem; }
+    .footer-brand p { font-size: .85rem; font-style: italic; font-family: var(--serif); color: var(--gold-light); margin-bottom: 1.2rem; }
+    .footer-brand .contact-email { font-size: .88rem; color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s; display: block; margin-bottom: .4rem; }
+    .footer-brand .contact-email:hover { color: var(--gold); }
+    .footer-col h4 { font-family: var(--sans); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: .5rem; }
+    .footer-col ul a { font-size: .85rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .footer-col ul a:hover { color: #fff; }
+    .social-icons { display: flex; gap: .8rem; margin-top: 1rem; }
+    .social-icon { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.5); text-decoration: none; transition: border-color .2s, color .2s, background .2s; }
+    .social-icon:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,169,110,.1); }
+    .footer-bottom { max-width: 1200px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: .75rem; color: rgba(255,255,255,.25); flex-wrap: wrap; gap: 1rem; }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); transition: transform .2s, box-shadow .2s; text-decoration: none; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.55); }
+    .whatsapp-btn svg { width: 30px; height: 30px; fill: #fff; }
+    .whatsapp-tooltip { position: absolute; right: 68px; background: var(--charcoal); color: #fff; font-family: var(--sans); font-size: .75rem; white-space: nowrap; padding: .45rem .9rem; border-radius: 4px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+    .whatsapp-tooltip::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-right: none; border-left-color: var(--charcoal); }
+    .whatsapp-btn:hover .whatsapp-tooltip { opacity: 1; }
+    @media (max-width: 768px) { .whatsapp-btn { bottom: 1.2rem; right: 1.2rem; width: 52px; height: 52px; } }
+
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @keyframes pulse { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+    .reveal { opacity:0; transform:translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .reveal.visible { opacity:1; transform:none; }
+    .reveal-delay-1 { transition-delay:.1s; }
+    .reveal-delay-2 { transition-delay:.2s; }
+    .reveal-delay-3 { transition-delay:.35s; }
+
+    /* RESPONSIVE */
+    @media (max-width:1024px) { .gallery-grid { grid-template-columns: repeat(4,1fr); } }
+    @media (max-width:900px) {
+      .gallery-grid { grid-template-columns: repeat(3,1fr); grid-auto-rows:150px; }
+      .gallery-grid .g-item:nth-child(8), .gallery-grid .g-item:nth-child(15) { grid-column: span 1; }
+      .property-body { grid-template-columns:1fr; gap:2.5rem; }
+      .footer-inner { grid-template-columns:1fr 1fr; }
+      #lb-prev { left:-10px; } #lb-next { right:-10px; }
+    }
+    @media (max-width:768px) {
+      section { padding:5rem 5vw; }
+      .hero { height: 58vh; min-height: 400px; align-items: flex-end; }
+      .hero-content { padding: 0 1.4rem 2.2rem; max-width: 100%; }
+      .hero h1 { font-size: 2rem; margin-bottom: .7rem; }
+      .hero-tagline { font-size: .88rem; max-width: 100%; margin-bottom: 1.3rem; }
+      .hero-eyebrow { font-size: .62rem; margin-bottom: .6rem; }
+      .nav-links { display:none; flex-direction:column; position:fixed; top:0; right:0; bottom:0; width:75%; max-width:300px; background:var(--warm-white); padding:5rem 2rem 2rem; gap:0; box-shadow:-10px 0 40px rgba(0,0,0,.15); transform:translateX(100%); transition:transform .4s cubic-bezier(.16,1,.3,1); z-index:200; }
+      .nav-links.open { display:flex; transform:translateX(0); }
+      .nav-links li { border-bottom:1px solid var(--lavender-soft); padding:1rem 0; }
+      .nav-toggle { display:flex; z-index:300; }
+      .enquiry-form { grid-template-columns:1fr; }
+      .form-group.full, .form-submit { grid-column:span 1; }
+      .footer-inner { grid-template-columns:1fr; gap:2rem; }
+      .footer-bottom { flex-direction:column; text-align:center; }
+      .gallery-grid { grid-template-columns:repeat(2,1fr); grid-auto-rows:130px; }
+      .gallery-grid .g-item:first-child { grid-column:span 2; }
+      .lb-thumbs { display:none; }
+    }
+    @media (max-width:480px) {
+      .amenities-grid { grid-template-columns:1fr; }
+      .lb-arrow { width:36px; height:36px; font-size:1rem; }
+      #lb-prev { left:4px; } #lb-next { right:4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <div class="lb-img-wrap">
+      <button class="lb-arrow" id="lb-prev" aria-label="Previous">&#8592;</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-arrow" id="lb-next" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="lb-meta">
+      <p class="lb-caption" id="lb-caption"></p>
+      <p class="lb-counter" id="lb-counter"></p>
+    </div>
+    <div class="lb-thumbs" id="lb-thumbs"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Lavender Retreats</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#lavender-hills">Lavender Hills</a></li>
+      <li><a href="#lavender-crest">Lavender Crest</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#enquiry" class="nav-cta">Enquire Now</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Holiday Retreats · Lonavala & Karjat, India</p>
+      <h1>Lavender <em>Retreats</em></h1>
+      <p class="hero-tagline">Two exceptional holiday homes nestled among the hills — where stillness meets elegance.</p>
+      <a href="#lavender-hills" class="btn">Explore Our Properties</a>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-label reveal">Our Story</p>
+      <h2 class="section-title reveal reveal-delay-1">A Place to Exhale</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <p class="about-text reveal reveal-delay-3">Lavender Retreats is a small collection of two handpicked holiday homes, each offering a distinctive sense of place and an unhurried pace of life. Whether you seek a quiet countryside refuge or a hilltop panorama that stretches to the horizon, both properties are curated to the finest detail — combining natural beauty with thoughtful design, warm hospitality, and the kind of peace that only a truly special setting can offer.</p>
+      <div class="about-features">
+        <div class="about-feature reveal reveal-delay-1"><div class="about-feature-icon">🌿</div><h4>Natural Surroundings</h4><p>Immerse yourself in rolling hills, wildflower meadows and open skies.</p></div>
+        <div class="about-feature reveal reveal-delay-2"><div class="about-feature-icon">✦</div><h4>Exceptional Interiors</h4><p>Carefully furnished spaces that feel like home — only better.</p></div>
+        <div class="about-feature reveal reveal-delay-3"><div class="about-feature-icon">🤍</div><h4>Personal Service</h4><p>Attentive hosts ready to make your stay effortlessly special.</p></div>
+        <div class="about-feature reveal reveal-delay-1"><div class="about-feature-icon">🌅</div><h4>Unforgettable Views</h4><p>Wake to golden mornings and linger over sunset skies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAVENDER HILLS -->
+  <section class="property" id="lavender-hills">
+    <div class="property-inner">
+      <div class="property-header">
+        <p class="section-label reveal">Property 1 — Lonavala</p>
+        <h2 class="section-title reveal reveal-delay-1">Lavender Hills</h2>
+        <div class="divider divider-left reveal reveal-delay-2"></div>
+      </div>
+      <div class="gallery-grid reveal" id="hills-gallery"></div>
+      <div class="gallery-view-all"><button onclick="openLightbox('hills',0)">View all 25 photos ↗</button></div>
+      <div class="property-body">
+        <div class="property-desc reveal">
+          <span class="property-badge">Sleeps 10 · 3 Bedrooms</span>
+          <p>A serene countryside retreat nestled among rolling hills and fragrant lavender fields. Lavender Hills offers a rare kind of quiet — the sort where you notice birdsong, slow your breathing, and truly rest.</p>
+          <p>The open-plan kitchen and living area spill onto a sun-warmed terrace, where a private pool shimmers beneath an open sky. Evenings here are unforgettable — watching the last light dissolve over the hills with a glass of local wine in hand.</p>
+          <p>Ideal for families, couples travelling together, or a group of friends seeking space, beauty, and a slower pace of life.</p>
+          <br /><a href="#enquiry" class="btn btn-solid">Enquire About This Property</a>
+        </div>
+        <div class="property-amenities reveal reveal-delay-2">
+          <p class="amenities-title">Amenities & Features</p>
+          <div class="amenities-grid">
+            <div class="amenity"><span class="amenity-dot"></span>Private pool</div>
+            <div class="amenity"><span class="amenity-dot"></span>3 bedrooms</div>
+            <div class="amenity"><span class="amenity-dot"></span>Open-plan kitchen</div>
+            <div class="amenity"><span class="amenity-dot"></span>3 bathrooms</div>
+            <div class="amenity"><span class="amenity-dot"></span>Panoramic terrace</div>
+            <div class="amenity"><span class="amenity-dot"></span>High-speed Wi-Fi</div>
+            <div class="amenity"><span class="amenity-dot"></span>Sunset views</div>
+            <div class="amenity"><span class="amenity-dot"></span>BBQ & outdoor dining</div>
+            <div class="amenity"><span class="amenity-dot"></span>Air conditioning</div>
+            <div class="amenity"><span class="amenity-dot"></span>Parking on-site</div>
+            <div class="amenity"><span class="amenity-dot"></span>Fully equipped kitchen</div>
+            <div class="amenity"><span class="amenity-dot"></span>Linen & towels</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAVENDER CREST -->
+  <section class="property alt-bg" id="lavender-crest">
+    <div class="property-inner">
+      <div class="property-header">
+        <p class="section-label reveal">Property 2 — Karjat</p>
+        <h2 class="section-title reveal reveal-delay-1">Lavender Crest</h2>
+        <div class="divider divider-left reveal reveal-delay-2"></div>
+      </div>
+      <div class="gallery-grid reveal" id="crest-gallery"></div>
+      <div class="gallery-view-all"><button onclick="openLightbox('crest',0)">View all 35 photos ↗</button></div>
+      <div class="property-body">
+        <div class="property-desc reveal">
+          <span class="property-badge">Sleeps 15 · 4 Bedrooms</span>
+          <p>Perched at the crown of the hillside, Lavender Crest commands one of the most breathtaking panoramas in the region. This luxurious four-bedroom villa was designed for those who refuse to compromise — on space, on style, or on the view.</p>
+          <p>The wraparound terrace becomes the heart of daily life here: morning coffee as the mist lifts from the valley, alfresco lunches in dappled shade, long dinners beneath the stars.</p>
+          <p>Lavender Crest is the perfect setting for milestone occasions, extended family gatherings, or simply a week of extraordinary living shared with the people you love most.</p>
+          <br /><a href="#enquiry" class="btn btn-solid">Enquire About This Property</a>
+        </div>
+        <div class="property-amenities reveal reveal-delay-2">
+          <p class="amenities-title">Amenities & Features</p>
+          <div class="amenities-grid">
+            <div class="amenity"><span class="amenity-dot"></span>4 bedrooms</div>
+            <div class="amenity"><span class="amenity-dot"></span>Private garden</div>
+            <div class="amenity"><span class="amenity-dot"></span>Gourmet kitchen</div>
+            <div class="amenity"><span class="amenity-dot"></span>5 bathrooms</div>
+            <div class="amenity"><span class="amenity-dot"></span>Wraparound terrace</div>
+            <div class="amenity"><span class="amenity-dot"></span>High-speed Wi-Fi</div>
+            <div class="amenity"><span class="amenity-dot"></span>Panoramic views</div>
+            <div class="amenity"><span class="amenity-dot"></span>Outdoor firepit</div>
+            <div class="amenity"><span class="amenity-dot"></span>Air conditioning</div>
+            <div class="amenity"><span class="amenity-dot"></span>Ample parking</div>
+            <div class="amenity"><span class="amenity-dot"></span>Premium appliances</div>
+            <div class="amenity"><span class="amenity-dot"></span>Linen & towels</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="section-inner">
+      <p class="section-label reveal">Find Us</p>
+      <h2 class="section-title reveal reveal-delay-1">Getting Here</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+
+      <div class="location-grid">
+
+        <!-- Lavender Hills -->
+        <div class="location-card reveal reveal-delay-1">
+          <div class="location-card-header">
+            <h3>Lavender Hills</h3>
+            <p>Lonavala, Maharashtra</p>
+          </div>
+          <div class="location-card-body">
+            <div class="location-address">
+              <span class="location-address-icon">📍</span>
+              <p>A4, NG Valley, Near Buvanchi Misal, Frichley Hill Rd,<br>Behind Fariyas Resort Lonavala,<br>Frichley Hills, Tungarli, Lonavala</p>
+            </div>
+            <a href="https://maps.app.goo.gl/QWV6hZCzv59WaGyeA" target="_blank" class="location-map-btn">
+              <span>📍</span> Open in Google Maps
+            </a>
+            <div class="location-divider"></div>
+            <p class="how-to-reach-title">How to Reach</p>
+            <div class="reach-item">
+              <span class="reach-icon">✈️</span>
+              <p><strong>By Air:</strong> Pune International Airport is approximately 65 km away (1.5 hrs drive). Mumbai's Chhatrapati Shivaji Airport is around 95 km (2–2.5 hrs drive).</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚆</span>
+              <p><strong>By Train:</strong> Lonavala Railway Station is the nearest railhead, just 4 km from the property. Well connected to both Mumbai and Pune with frequent express and local trains.</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚗</span>
+              <p><strong>By Road:</strong> Take the Mumbai–Pune Expressway (NH48) and exit at Lonavala. Head towards Tungarli and follow Frichley Hill Road. Look for Fariyas Resort — the property is behind it. GPS navigation works well up to the main gate.</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚕</span>
+              <p><strong>Local Transfers:</strong> Cabs are readily available from Lonavala station and the expressway. We recommend pre-booking for a smooth arrival.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lavender Crest -->
+        <div class="location-card reveal reveal-delay-2">
+          <div class="location-card-header">
+            <h3>Lavender Crest</h3>
+            <p>Jambrung, Maharashtra</p>
+          </div>
+          <div class="location-card-body">
+            <div class="location-address">
+              <span class="location-address-icon">📍</span>
+              <p>Rich Fields, Plot No. 6 & 23,<br>Jambrung, Maharashtra 410201</p>
+            </div>
+            <a href="https://maps.app.goo.gl/Y6C3HwAf5xPH3z5D9" target="_blank" class="location-map-btn">
+              <span>📍</span> Open in Google Maps
+            </a>
+            <div class="location-divider"></div>
+            <p class="how-to-reach-title">How to Reach</p>
+            <div class="reach-item">
+              <span class="reach-icon">✈️</span>
+              <p><strong>By Air:</strong> Pune International Airport is approximately 60 km away (1.5 hrs drive). Mumbai's Chhatrapati Shivaji Airport is around 90 km (2–2.5 hrs drive).</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚆</span>
+              <p><strong>By Train:</strong> Karjat Railway Station is the nearest major railhead, approximately 25 km from the property. Karjat is well connected to Mumbai and Pune with regular express and local trains.</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚗</span>
+              <p><strong>By Road:</strong> Take the Mumbai–Pune Expressway (NH48) and exit towards Lonavala/Khandala. Head towards Jambrung village. Use the Google Maps link above for precise navigation — the final stretch involves a scenic narrow road, so drive carefully.</p>
+            </div>
+            <div class="reach-item">
+              <span class="reach-icon">🚕</span>
+              <p><strong>Local Transfers:</strong> We recommend pre-booking a cab from Lonavala or Pune. Local auto-rickshaws are available but may not reach the property directly. Please contact us for recommended transfer services.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section class="enquiry" id="enquiry">
+    <div class="section-inner">
+      <p class="section-label reveal">Get in Touch</p>
+      <h2 class="section-title reveal reveal-delay-1">Begin Your Escape</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <p class="enquiry-lead reveal reveal-delay-3">Tell us about your dream stay and we'll be in touch within 24 hours.</p>
+      <form class="enquiry-form reveal" id="enquiryForm" onsubmit="handleSubmit(event)">
+
+        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="entry.1121759312" placeholder="Jane Smith" required /></div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="entry.2084066261" placeholder="jane@example.com" required /></div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="entry.522747847" placeholder="+91 00000 00000" /></div>
+        <div class="form-group">
+          <label for="property">Property of Interest</label>
+          <select id="property" name="entry.359448860" required>
+            <option value="" disabled selected>Select a property…</option>
+            <option value="Lavender Hills — Lonavala">Lavender Hills — Lonavala</option>
+            <option value="Lavender Crest — Karjat">Lavender Crest — Karjat</option>
+            <option value="Both Properties">Both Properties</option>
+            <option value="Not Sure Yet">Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="checkin">Check-in Date</label><input type="date" id="checkin" name="entry.353559790" /></div>
+        <div class="form-group"><label for="checkout">Check-out Date</label><input type="date" id="checkout" name="entry.1529857890" /></div>
+        <div class="form-group full"><label for="message">Your Message</label><textarea id="message" name="entry.636180979" placeholder="Tell us about your group, any special requirements, or simply say hello…"></textarea></div>
+        <div class="form-submit"><button type="submit" class="btn btn-solid">Send Enquiry</button></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Lavender Retreats</h3>
+        <p>Two extraordinary places. One unforgettable escape.</p>
+        <a href="mailto:reservations@lavenderhills.in" class="contact-email">✉ reservations@lavenderhills.in</a>
+        <a href="tel:+918468932183" class="contact-email">📞 +91 84689 32183</a>
+      </div>
+      <div class="footer-col">
+        <h4>Our Properties</h4>
+        <ul>
+          <li><a href="#lavender-hills">Lavender Hills</a></li>
+          <li><a href="#lavender-crest">Lavender Crest</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/lavenderhills2023?utm_source=qr" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/17diDzbVu5/" target="_blank">Facebook</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/lavenderhills2023?utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/17diDzbVu5/" target="_blank" class="social-icon" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Lavender Retreats. All rights reserved.</span>
+      <span>Designed with care · [Your Location]</span>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/918468932183?text=Hi%2C%20I%20am%20interested%20in%20booking%20a%20stay%20at%20Lavender%20Retreats." class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    /* =============================================================
+       IMAGE DATA — REPLACE THESE URLs WITH YOUR REAL PHOTOS
+       - src: your hosted image URL (Imgur, Cloudinary, etc.)
+       - alt: short description of the photo
+       ============================================================= */
+
+    const hillsImages = [
+      // — Bedrooms —
+      { src: 'https://lh3.googleusercontent.com/d/1fi4Z9bEkPHb455Hs2UE34fan2o2hXIaF', alt: 'Master Bedroom' },
+      { src: 'https://lh3.googleusercontent.com/d/1U0bin5gfVPV0Pi13CFInr4MdH_cyXTIB', alt: 'Master Bedroom' },
+      { src: 'https://lh3.googleusercontent.com/d/1NR3nXYGN3om9OivD5bTmt7IK-ezMYv0k', alt: 'Views' },
+      { src: 'https://lh3.googleusercontent.com/d/1JrTHfToOnKOiUufPABZmaA5ZK7M8mT94', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/16Gi-OqaQJgV5HVlAgbTcZ2OtfpjqKBlK', alt: 'Master Bedroom' },
+      { src: 'https://lh3.googleusercontent.com/d/1kk6l8cUdJi9Q7WdQNjGObsYoC0gVrKM7', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1MrVGVqZMNrxaFh3RJa-6GrvNWfL3k2SW', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1R697lIw7k6tcdJEaB84HDdRuexLtUJr6', alt: 'Bedroom 3' },
+      { src: 'https://lh3.googleusercontent.com/d/1lLGujd3F18ROxg8jp4-ijkNSfoMarfb6', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1M4O6g_Yvq0X9tp0BJKsLMqyyHfFdcFH5', alt: 'Bedroom 3' },
+      { src: 'https://lh3.googleusercontent.com/d/1373q5HYJEBt3MWfUwe6D2NUawFFamuwi', alt: 'Bedroom 1' },
+      // — Pool & Outdoor —
+      { src: 'https://lh3.googleusercontent.com/d/1sGCly2hazmyQdmnFuXAmHZ9BySwEDCBo', alt: 'Pool Side Gazebo' },
+      { src: 'https://lh3.googleusercontent.com/d/1pwaczTDPdVDSCiqC6qBI-yXlOeppoSPC', alt: 'Pool Side Gazebo' },
+      { src: 'https://lh3.googleusercontent.com/d/1_3TBYDpLc8-NSeU2E7YD16SaQQpTrmUl', alt: 'Pool Side Gazebo' },
+      // — Dining & Kitchen —
+      { src: 'https://lh3.googleusercontent.com/d/1cspQUPaVsyjmokgDKyK8AJbW71x5LMfF', alt: 'Dining' },
+      { src: 'https://lh3.googleusercontent.com/d/1QBXRTxJoi7MR1pynLHpVb6LR6jtEYgde', alt: 'Outdoor Patio' },
+      { src: 'https://lh3.googleusercontent.com/d/1Oj-mv34UeChdOYcihsHyVZkLOwiS-zyY', alt: 'Dining' },
+      // — Bathrooms —
+      { src: 'https://lh3.googleusercontent.com/d/1FWMFU_FROjFC69QuMhBf7vWCVFyIC1CX', alt: 'Bathroom 1' },
+      { src: 'https://lh3.googleusercontent.com/d/1iE_rEOBWOc5f8qQvMg1t1Ea1gUS3xKGe', alt: 'Bathroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1lMrVc9m50_sF_usunvE2xuAak8B4Qi6a', alt: 'Kitchen' },
+      // — Outdoor & Views —
+      { src: 'https://lh3.googleusercontent.com/d/1VmteUFp69Vq6Ib-CjY8VyKL9bL7sW5t-', alt: 'Outdoor Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1D1eXPAeI9vuexD36_blFNhHFTzm9a-sI', alt: 'Outdoor Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1XJk9CU5z6e0JybQyG-hINvAseeCqQ5Cv', alt: 'Pool' },
+      { src: 'https://lh3.googleusercontent.com/d/1w5yDrDb4Ihdr-d745wfyajSOGrMNC1Kf', alt: 'Pool' },
+      { src: 'https://lh3.googleusercontent.com/d/1GBed1q4LkfZZiVcNBWp1lUBPOgqMnC6O', alt: 'Front View' },
+    ];
+
+    const crestImages = [
+      { src: 'https://lh3.googleusercontent.com/d/1pxBpfCHsK1AzwsZALb9mCI8Efn4jdM8o', alt: 'Pool' },
+      { src: 'https://lh3.googleusercontent.com/d/1w0snBpuwA71HZOu2tz_fj1V0zYbGzBZW', alt: 'Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1sLwenKbQgdbFT6xJvwwyclTPaXUBOnJS', alt: 'Bedroom Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1nEr8XmgQVrWsZRgWlKyp4P1b5nuac05E', alt: 'Front View' },
+      { src: 'https://lh3.googleusercontent.com/d/1kQhIHuwHOnIkvTu1N3lBJ-7q0ErhC0qK', alt: 'Bedroom 1' },
+      { src: 'https://lh3.googleusercontent.com/d/1FgpkXX8guPB7pXHHtqW9P7ca5IK88ijQ', alt: 'Bedroom 1' },
+      { src: 'https://lh3.googleusercontent.com/d/1Ub96l2tzMNoxhZidSRhq5EzGfYaWdvlZ', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1U2-yBfZ0I3MoOrj-mY8woid4zfl9w3uM', alt: 'Bedroom 2' },
+      { src: 'https://lh3.googleusercontent.com/d/1QaqTvGoAAWw3myKscmucQbFZP3IF0lmr', alt: 'Bedroom 3' },
+      { src: 'https://lh3.googleusercontent.com/d/13_Bd3gOUuW1KIUs8xaXTX6wx3vJfqfNC', alt: 'Bedroom 3' },
+      { src: 'https://lh3.googleusercontent.com/d/1RZDscHVHh5PgLY62A8CCvX5gEW8DFppi', alt: 'Bedroom 4' },
+      { src: 'https://lh3.googleusercontent.com/d/1d7rbIxr3nCv6r4bWMnafZrMP0TMqg8hN', alt: 'Bedroom 4' },
+      { src: 'https://lh3.googleusercontent.com/d/1OxDcGIKrMXZV-Mfvu_Q3XlPIgwv1FJKh', alt: 'Outdoor Sit-out' },
+      { src: 'https://lh3.googleusercontent.com/d/1sKYX4Uzjbux6phFI__N8Lw6cjoaFwtvb', alt: 'Dining' },
+      { src: 'https://lh3.googleusercontent.com/d/1LFRzBi03LV7BAlaRlEEp1mRXk2ziguFq', alt: 'Dining' },
+      { src: 'https://lh3.googleusercontent.com/d/118mRgw0wS_souQwTIJiResfYd5fSMgnW', alt: 'Kitchen' },
+      { src: 'https://lh3.googleusercontent.com/d/1Bt-uAEd-o_w9AKvXK6MagMCj5m94VSF7', alt: 'Living' },
+      { src: 'https://lh3.googleusercontent.com/d/1wDS_9oxRoE9Vbg1KcHsCX9ch6ZTp9A23', alt: 'Living' },
+      { src: 'https://lh3.googleusercontent.com/d/1LiRHPiHt37F6soSZHWuMKUoAr5baJI4z', alt: 'Living' },
+      { src: 'https://lh3.googleusercontent.com/d/1NjFCAO4qWqrvVNv62KI231PjyLoQszER', alt: 'Kitchen' },
+      { src: 'https://lh3.googleusercontent.com/d/1U_YUUZBmfA5UUh7995Q_PBuwyh9HKqVJ', alt: 'Pool Side' },
+      { src: 'https://lh3.googleusercontent.com/d/1NNR3eC5Z-cURb9dwWterUQCxf0NirGSn', alt: 'Pool' },
+      { src: 'https://lh3.googleusercontent.com/d/1aITRuDZlPmCMV1VkoAvcZJRLIpVYIJAs', alt: 'Pool Side' },
+      { src: 'https://lh3.googleusercontent.com/d/1HldKxChmTXKbielEkbvAZcKZAyyrDyqI', alt: 'Pool Side' },
+      { src: 'https://lh3.googleusercontent.com/d/1hG39gOMBNwF6Ln_J2Zud7EFeYm-ivSWB', alt: 'Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1EUm8z4CQ4f4uIOf8obd-DYaMOFMOpgxQ', alt: 'Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/16QLljfe5Avs34lWo7xiMUz3FUHkjRHB_', alt: 'Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1ROebZobZrjY8w3KClhEA9y4wDlZ6PNhf', alt: 'Bedroom Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1rW4kjrgM9Xy30KlIaCOWYqj56WgQ2Lu5', alt: 'Bedroom Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/1EmuOtHN7fpU9TebXTugJEN_3sTSQ5D1a', alt: 'Bedroom Terrace' },
+      { src: 'https://lh3.googleusercontent.com/d/13px32D2ICrwLHaIBFMtb_urjNGLue6qV', alt: 'Front View' },
+      { src: 'https://lh3.googleusercontent.com/d/139ntN6NZAVQ_s-nK1Q4i7FHDkbQbzxQI', alt: 'Pool' },
+      { src: 'https://lh3.googleusercontent.com/d/1iFTU3HfAXiddo-Q7BnAwKbujALsBjKqU', alt: 'Front View' },
+      { src: 'https://lh3.googleusercontent.com/d/1Zd___jXTdwbesP1K67rQxv6Dolb9qvyB', alt: 'Bathroom' },
+      { src: 'https://lh3.googleusercontent.com/d/1k5zWsgHcPFK7yDt8sXSWmgkCZABGPgqu', alt: 'Bathroom' },
+    ];
+
+    /* =============================================================
+       GALLERY BUILDER
+       Shows first 12 tiles; last tile gets a "+N more" overlay.
+       ============================================================= */
+    const VISIBLE = 12;
+
+    function buildGallery(containerId, images, key) {
+      const el  = document.getElementById(containerId);
+      const max = Math.min(VISIBLE, images.length);
+      images.slice(0, max).forEach((img, i) => {
+        const item = document.createElement('div');
+        item.className = 'g-item';
+        if (i === max - 1 && images.length > max) {
+          item.classList.add('show-more');
+          item.setAttribute('data-more', `+${images.length - max + 1}\u2009more`);
+        }
+        const image = document.createElement('img');
+        image.src     = img.src;
+        image.alt     = img.alt;
+        image.loading = i === 0 ? 'eager' : 'lazy';
+        item.appendChild(image);
+        item.addEventListener('click', () => openLightbox(key, i));
+        el.appendChild(item);
+      });
+    }
+
+    buildGallery('hills-gallery', hillsImages, 'hills');
+    buildGallery('crest-gallery', crestImages, 'crest');
+
+    /* =============================================================
+       LIGHTBOX ENGINE
+       ============================================================= */
+    const lightbox  = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lb-img');
+    const lbCaption = document.getElementById('lb-caption');
+    const lbCounter = document.getElementById('lb-counter');
+    const lbThumbs  = document.getElementById('lb-thumbs');
+
+    let activeImages = [];
+    let activeIndex  = 0;
+
+    function openLightbox(key, idx) {
+      activeImages = key === 'hills' ? hillsImages : crestImages;
+      activeIndex  = idx;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      buildThumbs();
+      showImage(activeIndex);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function showImage(idx) {
+      lbImg.classList.add('fading');
+      setTimeout(() => {
+        lbImg.src = activeImages[idx].src;
+        lbImg.alt = activeImages[idx].alt;
+        lbCaption.textContent = activeImages[idx].alt;
+        lbCounter.textContent = `${idx + 1} / ${activeImages.length}`;
+        lbImg.classList.remove('fading');
+      }, 160);
+      // Sync thumbs
+      [...lbThumbs.children].forEach((t, i) => t.classList.toggle('active', i === idx));
+      const activeThumb = lbThumbs.children[idx];
+      if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    function buildThumbs() {
+      lbThumbs.innerHTML = '';
+      activeImages.forEach((img, i) => {
+        const thumb = document.createElement('div');
+        thumb.className = 'lb-thumb';
+        const tImg = document.createElement('img');
+        tImg.src = img.src; tImg.alt = img.alt; tImg.loading = 'lazy';
+        thumb.appendChild(tImg);
+        thumb.addEventListener('click', () => { activeIndex = i; showImage(i); });
+        lbThumbs.appendChild(thumb);
+      });
+    }
+
+    function navigate(dir) {
+      activeIndex = (activeIndex + dir + activeImages.length) % activeImages.length;
+      showImage(activeIndex);
+    }
+
+    document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    // Keyboard
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'ArrowRight') navigate(1);
+      if (e.key === 'ArrowLeft')  navigate(-1);
+      if (e.key === 'Escape')     closeLightbox();
+    });
+
+    // Touch swipe
+    let swipeStart = 0;
+    lightbox.addEventListener('touchstart', e => { swipeStart = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchend', e => {
+      const diff = swipeStart - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+    });
+
+    /* =============================================================
+       NAV / SCROLL REVEAL / FORM
+       ============================================================= */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+
+    const toggle   = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      const form = document.getElementById('enquiryForm');
+      const btn  = form.querySelector('button[type="submit"]');
+
+      // Build form data
+      const data = new URLSearchParams({
+        'entry.1121759312': document.getElementById('name').value,
+        'entry.2084066261': document.getElementById('email').value,
+        'entry.522747847':  document.getElementById('phone').value,
+        'entry.359448860':  document.getElementById('property').value,
+        'entry.353559790':  document.getElementById('checkin').value,
+        'entry.1529857890': document.getElementById('checkout').value,
+        'entry.636180979':  document.getElementById('message').value,
+        'fvv': '1',
+        'fbzx': '0',
+      });
+
+      // Submit to Google Forms using no-cors fetch
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLScy0OjnovfuWdKt45QZXOT7OFe9lZjZ51F0utUsq1KYYEAF5Q/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data.toString()
+      });
+
+      // Show success
+      btn.textContent = 'Sent ✓';
+      btn.style.background  = '#4caf82';
+      btn.style.borderColor = '#4caf82';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = 'Send Enquiry';
+        btn.style.background  = '';
+        btn.style.borderColor = '';
+        btn.disabled = false;
+        form.reset();
+      }, 4000);
+    }
+  </script>
+
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.log('SW error:', err));
+      });
+    }
+
+    // Install prompt for Android "Add to Home Screen"
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      deferredPrompt = e;
+      // Show install banner after 30 seconds
+      setTimeout(() => {
+        if (deferredPrompt) showInstallBanner();
+      }, 30000);
+    });
+
+    function showInstallBanner() {
+      const banner = document.createElement('div');
+      banner.id = 'install-banner';
+      banner.innerHTML = `
+        <div style="position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e8dff5;border-radius:8px;padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 8px 32px rgba(139,93,184,.2);z-index:9999;max-width:320px;width:90%;">
+          <span style="font-size:1.6rem;">🏡</span>
+          <div style="flex:1;">
+            <p style="font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;color:#2c2c38;margin:0 0 .2rem;">Add to Home Screen</p>
+            <p style="font-family:'Jost',sans-serif;font-size:.72rem;color:#6b6680;margin:0;">Access Lavender Retreats like an app</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.4rem;">
+            <button onclick="installApp()" style="background:#8b5db8;color:#fff;border:none;border-radius:4px;padding:.4rem .8rem;font-size:.72rem;cursor:pointer;font-family:'Jost',sans-serif;">Install</button>
+            <button onclick="document.getElementById('install-banner').remove()" style="background:transparent;color:#8b5db8;border:1px solid #8b5db8;border-radius:4px;padding:.4rem .8rem;font-size:.72rem;cursor:pointer;font-family:'Jost',sans-serif;">Later</button>
+          </div>
+        </div>`;
+      document.body.appendChild(banner);
+    }
+
+    async function installApp() {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      document.getElementById('install-banner')?.remove();
+    }
+  </script>
+</body>
+</html>
