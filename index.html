@@ -30,15 +30,6 @@
   <meta name="author" content="Lavender Retreats" />
   <link rel="canonical" href="https://lavenderhills.in" />
 
-  <!-- PWA -->
-  <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#8b5db8" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Lavender Retreats" />
-  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1ZmUzxoOLe5JhE_NYeTBn7Wxm7E4WVnfx" />
-
   <!-- Geo Meta -->
   <meta name="geo.region" content="IN-MH" />
   <meta name="geo.placename" content="Lonavala, Maharashtra, India" />
@@ -526,12 +517,12 @@
         <div class="location-card reveal reveal-delay-2">
           <div class="location-card-header">
             <h3>Lavender Crest</h3>
-            <p>Jambrung, Maharashtra</p>
+            <p>Karjat, Maharashtra</p>
           </div>
           <div class="location-card-body">
             <div class="location-address">
               <span class="location-address-icon">📍</span>
-              <p>Rich Fields, Plot No. 6 & 23,<br>Jambrung, Maharashtra 410201</p>
+              <p>Rich Fields, Plot No. 6 & 23,<br>Jambrung, Karjat Maharashtra 410201</p>
             </div>
             <a href="https://maps.app.goo.gl/Y6C3HwAf5xPH3z5D9" target="_blank" class="location-map-btn">
               <span>📍</span> Open in Google Maps
@@ -878,54 +869,6 @@
         btn.disabled = false;
         form.reset();
       }, 4000);
-    }
-  </script>
-
-  <!-- PWA Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('SW registered:', reg.scope))
-          .catch(err => console.log('SW error:', err));
-      });
-    }
-
-    // Install prompt for Android "Add to Home Screen"
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', e => {
-      e.preventDefault();
-      deferredPrompt = e;
-      // Show install banner after 30 seconds
-      setTimeout(() => {
-        if (deferredPrompt) showInstallBanner();
-      }, 30000);
-    });
-
-    function showInstallBanner() {
-      const banner = document.createElement('div');
-      banner.id = 'install-banner';
-      banner.innerHTML = `
-        <div style="position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e8dff5;border-radius:8px;padding:1rem 1.4rem;display:flex;align-items:center;gap:1rem;box-shadow:0 8px 32px rgba(139,93,184,.2);z-index:9999;max-width:320px;width:90%;">
-          <span style="font-size:1.6rem;">🏡</span>
-          <div style="flex:1;">
-            <p style="font-family:'Jost',sans-serif;font-size:.8rem;font-weight:500;color:#2c2c38;margin:0 0 .2rem;">Add to Home Screen</p>
-            <p style="font-family:'Jost',sans-serif;font-size:.72rem;color:#6b6680;margin:0;">Access Lavender Retreats like an app</p>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:.4rem;">
-            <button onclick="installApp()" style="background:#8b5db8;color:#fff;border:none;border-radius:4px;padding:.4rem .8rem;font-size:.72rem;cursor:pointer;font-family:'Jost',sans-serif;">Install</button>
-            <button onclick="document.getElementById('install-banner').remove()" style="background:transparent;color:#8b5db8;border:1px solid #8b5db8;border-radius:4px;padding:.4rem .8rem;font-size:.72rem;cursor:pointer;font-family:'Jost',sans-serif;">Later</button>
-          </div>
-        </div>`;
-      document.body.appendChild(banner);
-    }
-
-    async function installApp() {
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-      document.getElementById('install-banner')?.remove();
     }
   </script>
 </body>
